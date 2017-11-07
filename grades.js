@@ -1,8 +1,8 @@
 "use strict"
 const request = require('request');
 
-const { getCampusUrl } = require('./urls');
-const { parseCampusData } = require('./parsers');
+const { getCampusUrl, getAllGradesUrl } = require('./urls');
+const { parseCampusData, parseGradesBySchool } = require('./parsers');
 const { getDataFromWeb } = require('./utils');
 
 const getGradesByCampus = (campus, callback) => new Promise((resolve, reject) => {
@@ -18,7 +18,24 @@ const getGradesByCampus = (campus, callback) => new Promise((resolve, reject) =>
   }
 });
 
+const getGradesBySchool = (school, callback) => new Promise((resolve, reject) => {
+  if(!school || typeof school !== typeof 0){
+    reject("School must be a valid integer.");
+    return callback("School must be a valid integer");
+  }else{
+    const url = getAllGradesUrl();
+    return getDataFromWeb(url)
+      .then(data => parseGradesBySchool(data, school))
+      .then(res => resolve(res))
+    //  .then(() => callback(null, res))
+      .catch((err) => {
+    //    callback(err);
+        reject(err);
+      });
+  }
+});
 
 module.exports = {
-  getGradesByCampus : getGradesByCampus
+  getGradesByCampus : getGradesByCampus,
+  getGradesBySchool : getGradesBySchool
 }

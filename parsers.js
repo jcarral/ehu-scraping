@@ -3,6 +3,8 @@
 const cheerio = require('cheerio');
 
 const parseCampusData = (data) => new Promise((resolve, reject) => {
+  if(!data) return reject("Can't parse empty data");
+
   const $ = cheerio.load(data);
   let schools = [];
 
@@ -13,9 +15,9 @@ const parseCampusData = (data) => new Promise((resolve, reject) => {
 
     $(this).next().find("a").each(function(){
       let grade = {};
-      let gradeHref = $(this).attr("href");
-      let urlAuxCode = gradeHref.split("p_cod_plan=")[1];
-      let urlAuxSchool = gradeHref.split("p_cod_centro=")[1];
+      const gradeHref = $(this).attr("href");
+      const urlAuxCode = gradeHref.split("p_cod_plan=")[1];
+      const urlAuxSchool = gradeHref.split("p_cod_centro=")[1];
 
       grade.name = $(this).text();
       grade.gradeCode = urlAuxCode.substr(0, urlAuxCode.indexOf("&"));
@@ -29,6 +31,31 @@ const parseCampusData = (data) => new Promise((resolve, reject) => {
   return resolve(schools);
 });
 
+
+const parseGradesBySchool = (data, code) => new Promise((resolve, reject) => {
+  if(!data) return reject("Can't parse empty data");
+
+  const $ = cheerio.load(data);
+  let grades = [];
+  $("#contenedor>ul>li").each(function(){
+    const gradeItem = $(this).find("a");
+    const gradeHref = $(gradeItem).attr("href");
+
+    if(gradeHref && gradeHref.includes(`p_cod_centro=${code}`)){
+      let grade = {};
+      const urlAuxCode = gradeHref.split("p_cod_plan=")[1];
+
+      grade.name = $(this).text();
+      grade.gradeCode = urlAuxCode.substr(0, urlAuxCode.indexOf("&"));
+      grade.href = `https://ehu.eus/${gradeHref}`;
+
+      grades.push(grade);
+    }
+  });
+  return resolve(grades);
+});
+
 module.exports = {
-  parseCampusData : parseCampusData
+  parseCampusData : parseCampusData,
+  parseGradesBySchool: parseGradesBySchool
 }

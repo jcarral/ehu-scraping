@@ -1,7 +1,11 @@
 "use strict"
 
-const { getGradesByCampus } = require("./grades");
+const {
+  getGradesByCampus,
+  getGradesBySchool
+} = require("./grades");
 
 module.exports = {
-  getGradesByCampus : getGradesByCampus
+  getGradesByCampus : getGradesByCampus,
+  getGradesBySchool : getGradesBySchool
 }

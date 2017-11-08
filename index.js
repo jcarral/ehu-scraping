@@ -2,10 +2,16 @@
 
 const {
   getGradesByCampus,
-  getGradesBySchool
+  getGradesBySchool,
+  getGradeSummary,
+  getGradeSubjects,
+  getGradeSubjectsByCourse
 } = require("./grades");
 
 module.exports = {
   getGradesByCampus : getGradesByCampus,
-  getGradesBySchool : getGradesBySchool
+  getGradesBySchool : getGradesBySchool,
+  getGradeSummary: getGradeSummary,
+  getGradeSubjects: getGradeSubjects,
+  getGradeSubjectsByCourse: getGradeSubjectsByCourse
 }

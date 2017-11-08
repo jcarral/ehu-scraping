@@ -14,7 +14,9 @@ const campusValue = (str) => {
   }
 };
 
+const courseValue = (str) => str[str.length - 1];
 
 module.exports = {
-  valToCampus : campusValue
+  valToCampus: campusValue,
+  courseValue: courseValue
 }

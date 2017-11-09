@@ -7,7 +7,7 @@ const {getDataFromWeb} = require('../utils/scraping');
 
 const getGradesByCampus = (campus) => {
   if (!campus || campus.length === 0 || typeof campus === "function") {
-    Promise.reject("Campus must be an String. Only BI, GI, and AR are avalaible.");
+    return Promise.reject("Campus must be an String. Only BI, GI, and AR are avalaible.");
   } else {
     return getCampusUrl(campus).then(url => getDataFromWeb(url)).then(data => parseCampusData(data))
   }
@@ -15,7 +15,7 @@ const getGradesByCampus = (campus) => {
 
 const getGradesBySchool = (school, callback) => {
   if (!school || typeof school !== typeof 0) {
-    Promise.reject("School must be a valid integer.");
+    return Promise.reject("School must be a valid integer.");
   } else {
     const url = getAllGradesUrl();
     return getDataFromWeb(url).then(data => parseGradesBySchool(data, school));
@@ -24,9 +24,9 @@ const getGradesBySchool = (school, callback) => {
 
 const getGradeSummary = (gradeCode, schoolCode) => {
   if (!gradeCode || typeof gradeCode !== typeof "string")
-    Promise.reject("Error: Grade code is needed to obtain the information");
+    return Promise.reject("Error: Grade code is required to obtain the information");
   else if (!schoolCode || typeof schoolCode !== typeof "string")
-    Promise.reject("Error: School code is needed to obtain the information");
+    return Promise.reject("Error: School code is required to obtain the information");
   else {
     const url = getGradeUrl(gradeCode, schoolCode);
 
@@ -38,9 +38,9 @@ const getGradeSubjects = (gradeCode, schoolCode) => getGradeSubjectsByCourse(gra
 
 const getGradeSubjectsByCourse = (gradeCode, schoolCode, course) => {
   if (!gradeCode || typeof gradeCode !== typeof "string")
-    return Promise.reject("Error: Grade code is needed to obtain the information");
+    return Promise.reject("Error: Grade code is required to obtain the information");
   else if (!schoolCode || typeof schoolCode !== typeof "string")
-    return Promise.reject("Error: School code is needed to obtain the information");
+    return Promise.reject("Error: School code is required to obtain the information");
   else {
     const url = getGradeSubjectsUrl(gradeCode, schoolCode);
     return getDataFromWeb(url).then(data => parseGradeSubjects(data, course))

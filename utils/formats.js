@@ -1,6 +1,6 @@
 "use strict";
 
-const campusValue = (str) => {
+const _campusValue = (str) => {
   str = str.toUpperCase();
   switch (str) {
     case "BI" || "BIZKAIA" || "BIZ" || "VIZCAYA":
@@ -14,9 +14,27 @@ const campusValue = (str) => {
   }
 };
 
-const courseValue = (str) => str[str.length - 1];
+const _courseValue = (str) => str[str.length - 1];
+
+const _numToLanguage = num => {
+  if(isNaN(num)) throw "Can't parse NaN to get a language";
+    num = parseInt(parseInt(num)/10);
+    switch (num) {
+      case 0:
+      case 1:
+        return 'es';
+      case 3:
+      case 4:
+        return 'eu';
+      case 6:
+        return 'en';
+      default:
+        return 'es';
+    }
+};
 
 module.exports = {
-  valToCampus: campusValue,
-  courseValue: courseValue
+  valToCampus: _campusValue,
+  courseValue: _courseValue,
+  numToLanguage: _numToLanguage
 }

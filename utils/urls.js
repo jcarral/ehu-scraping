@@ -32,10 +32,19 @@ const _getSubjectUrl = (subject, school, grade, course) => {
   else return `http://www.ehu.eus/es/web/estudiosdegrado-gradukoikasketak/aurtengo-gradu-guztiak?p_p_id=upvehuapp_WAR_upvehuappportlet&p_p_state=normal&p_p_mode=view&p_p_col_id=column-2&p_p_col_pos=0&p_p_col_count=1&p_p_lifecycle=1&_upvehuapp_WAR_upvehuappportlet_action=redirectAction&reu=/pls/entrada/plew0040.htm_asignatura_next?p_sesion=&p_cod_idioma=CAS&p_en_portal=N&p_cod_centro=${school}&p_cod_plan=${grade}&p_anyoAcad=act&p_pestanya=3&p_menu=principal&p_cod_asig=${subject}&p_ciclo=X&p_curso=${course}&p_vengo_de=asig_cursos`;
 };
 
+const _getUrlCode = (str, url) => {
+  if (!str || !url) throw "Error: Can't get the code from url, 2 parameters are required";
+  const urlCode = url.split(str);
+  if(urlCode.length === 0) throw "Error: Code not found [getUrlCode]";
+  const code = urlCode[1].split('&')[0]
+  return code.substring(1);
+};
+
 module.exports = {
   getCampusUrl: _getCampusUrl,
   getAllGradesUrl: _getAllGradesUrl,
   getGradeUrl: _getGradeUrl,
   getGradeSubjectsUrl: _getGradeSubjectsUrl,
-  getSubjectUrl : _getSubjectUrl
+  getSubjectUrl : _getSubjectUrl,
+  getUrlCode : _getUrlCode
 }

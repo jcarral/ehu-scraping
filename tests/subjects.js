@@ -54,7 +54,12 @@ const completeSubjectSummary = (res) => {
     const teacher = res.teachers[0];
     expect(teacher).to.be.an('object');
     expect(teacher).to.have.property('name');
-    expect(teacher).to.have.property('code');
-    expect(teacher).to.have.property('language');
+    expect(teacher).to.have.property('code_school');
+    expect(teacher).to.have.property('code_grade');
+    expect(teacher).to.have.property('id_teacher');
+    expect(teacher).to.have.property('dep_teacher');
+    expect(teacher).to.have.property('code_area');
+    expect(teacher).to.have.property('languages');
+    expect(teacher.languages).to.be.an('array');
   }
 };

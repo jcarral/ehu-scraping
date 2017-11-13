@@ -2,7 +2,8 @@
 
 const cheerio = require('cheerio');
 
-const { getSubjectUrl } = require('../utils/urls');
+const { getSubjectUrl, getUrlCode } = require('../utils/urls');
+const { numToLanguage } = require('../utils/formats');
 
 const C_DATA = 0, C_DEPARTAMENT = 1, C_CREDITS = 2;
 
@@ -59,9 +60,53 @@ const _parseSubjectSummary = (data, school, grade) => new Promise((resolve, reje
   subject.href = getSubjectUrl(subject.code, subject.school.code, subject.grade.code, subject.course);
   subject.teachers = [];
   subject.languages = [];
+
+  $(container).find('.asig').each(function(){
+    let teacher = {};
+    const currentTeacherUrl = $(this).attr('href');
+
+    teacher.name = $(this).text();
+    teacher['code_school'] = getUrlCode('p_cod_centro', currentTeacherUrl);
+    teacher['code_grade'] = getUrlCode('p_cod_plan', currentTeacherUrl);
+    teacher['id_teacher'] = getUrlCode('p_idp_prof', currentTeacherUrl);
+    teacher['dep_teacher'] = getUrlCode('p_dpto_prof', currentTeacherUrl);
+    teacher['code_area'] = getUrlCode('p_cod_area', currentTeacherUrl);
+    teacher.languages = [];
+
+    const parent = $(this).parent().parent().parent();
+    const h3 = parent.prevAll('h3')[0];
+    const group = $(h3).text().split(':');
+    if(group.length > 1){
+      const groupNum = group[1].substring(1, 3);
+      const language = numToLanguage(groupNum);
+
+      pushLanguage(language, teacher.languages);
+      pushLanguage(language, subject.languages);
+    }
+
+
+    pushTeacher(teacher, subject.teachers);
+  });
   return resolve(subject);
 });
 
 module.exports = {
   parseSubjectSummary : _parseSubjectSummary
+}
+
+function pushTeacher(teacher, list) {
+  const found = list.some(function (el) {
+    if(el.name === teacher.name && el['id_teacher'] && teacher['id_teacher']){
+      if (teacher.languages[0]) pushLanguage(teacher.languages[0], el.languages);
+      return true;
+    }
+    else return false;
+  });
+  if (!found) list.push(teacher);
+
+}
+
+function pushLanguage(lan, list){
+  if (list.indexOf(lan) >= 0) return;
+  else list.push(lan);
 }

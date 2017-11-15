@@ -5,11 +5,12 @@ const {
   getGradesBySchool,
   getGradeSummary,
   getGradeSubjects,
-  getGradeSubjectsByCourse
+  getGradeSubjectsByCourse,
 } = require("./grades");
 
 const {
-  getSubjectSummary
+  getSubjectSummary,
+  getSubjectInfo
 } = require('./subjects');
 
 module.exports = {
@@ -18,5 +19,6 @@ module.exports = {
   getGradeSummary: getGradeSummary,
   getGradeSubjects: getGradeSubjects,
   getGradeSubjectsByCourse: getGradeSubjectsByCourse,
-  getSubjectSummary: getSubjectSummary
+  getSubjectSummary: getSubjectSummary,
+  getSubjectInfo: getSubjectInfo
 }

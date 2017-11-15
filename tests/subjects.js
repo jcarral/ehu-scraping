@@ -3,7 +3,8 @@ const  { expect, assert } = chai;
 const chaiAsPromised = require('chai-as-promised');
 
 const {
-  getSubjectSummary
+  getSubjectSummary,
+  getSubjectInfo
 } = require('../');
 
 chai.use(chaiAsPromised);
@@ -28,6 +29,43 @@ describe('getSubjectSummary', () => {
 
 });
 
+
+describe('getSubjectInfo', () => {
+  it('should return an error, parameters are required', () => expect(getSubjectInfo()).to.be.rejected);
+
+  it('should return an object with the subject info attributes from complete subject', () => {
+    return getSubjectInfo('26224', '226', 'GINFOR20', '4')
+      .then(res => {
+        completeSubjectInfo(res);
+      });
+  });
+
+  it('should return an object with the subject info attributes from partial subject', () => {
+    return getSubjectInfo('25016', '323', 'GSOCIO30', '4')
+      .then(res => {
+        completeSubjectInfo(res);
+      });
+  });
+});
+
+
+const completeSubjectInfo = (res) => {
+  expect(res).to.be.an('object');
+  expect(res).to.have.property('name');
+  expect(res).to.have.property('school');
+  expect(res).to.have.property('grade');
+  expect(res).to.have.property('year');
+  expect(res).to.have.property('course');
+  expect(res).to.have.property('description');
+  expect(res).to.have.property('competences');
+  expect(res).to.have.property('content');
+  expect(res).to.have.property('bibliography');
+  expect(res.bibliography).to.be.an('array');
+  expect(res).to.have.property('observation');
+  expect(res).to.have.property('ordinary_announcement');
+  expect(res).to.have.property('extraordinary_announcement');
+
+};
 
 const completeSubjectSummary = (res) => {
   expect(res).to.be.an('object');

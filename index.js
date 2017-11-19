@@ -10,15 +10,17 @@ const {
 
 const {
   getSubjectSummary,
-  getSubjectInfo
+  getSubjectInfo,
+	getSubjectSchedule
 } = require('./subjects');
 
 module.exports = {
-  getGradesByCampus : getGradesByCampus,
-  getGradesBySchool : getGradesBySchool,
-  getGradeSummary: getGradeSummary,
-  getGradeSubjects: getGradeSubjects,
-  getGradeSubjectsByCourse: getGradeSubjectsByCourse,
-  getSubjectSummary: getSubjectSummary,
-  getSubjectInfo: getSubjectInfo
+  getGradesByCampus ,
+  getGradesBySchool ,
+  getGradeSummary,
+  getGradeSubjects,
+  getGradeSubjectsByCourse,
+  getSubjectSummary,
+  getSubjectInfo,
+	getSubjectSchedule
 }

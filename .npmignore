@@ -1,0 +1,6 @@
+tests
+node_modules
+package-lock.json
+test_json
+yarn.lock
+yarn-error.log

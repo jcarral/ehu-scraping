@@ -2,7 +2,7 @@
 //TODO: MODULARIZAR
 const cheerio = require('cheerio');
 
-const { getSubjectUrl, getUrlCode } = require('../utils/urls');
+const { getSubjectUrl, getUrlCode } = require('../utils/urls_old');
 const { numToLanguage, valueToType } = require('../utils/formats');
 
 const C_DATA = 0, C_DEPARTAMENT = 1, C_CREDITS = 3;

@@ -1,7 +1,7 @@
 "use strict";
 
 const { getDataFromWeb } = require('../utils/scraping');
-const { getSubjectUrl } = require('../utils/urls_old');
+const { getSubjectUrl } = require('../utils/urls');
 const { parseSubjectSummary, parseSubjectInfo, parseSubjectSchedule } = require('./subjects.parser');
 
 const _getSubjectSummary = (subject, school, grade, course) => {

@@ -15,27 +15,39 @@ const sortArrayByName = (a, b) => a.name > b.name;
 
 const fakeData = [
 	{
-		school: "aute exercitation",
+		school: {
+			name: "aute exercitation"
+		},
 		name: "dolor ea quis adipisicing eu"
 	},
 	{
-		school: "cillum dolor nulla labore",
+		school: {
+			name: "cillum dolor nulla labore"
+		},
 		name: 'non in'
 	},
 	{
-		school: "aute exercitation",
+		school: {
+			name: "aute exercitation"
+		},
 		name: "Ut adipisicing Excepteur"
 	},
 	{
-		school: "officia et nostrud nulla",
+		school: {
+			name: "officia et nostrud nulla"
+		},
 		name: "elit"
 	},
 	{
-		school: "cillum dolor nulla labore",
+		school: {
+			name: "cillum dolor nulla labore"
+		},
 		name: 'nostrud amet exercitation anim minim'
 	},
 	{
-		school: "officia et nostrud nulla",
+		school: {
+			name: "officia et nostrud nulla"
+		},
 		name: "aliqua sunt cupi"
 	},
 ];

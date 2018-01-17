@@ -1,5 +1,5 @@
 {
-  "name": "ehuScrapingLib",
+  "name": "ehu-scraping",
   "version": "0.0.1",
   "description": "Easy way to get EHU website data",
   "main": "index.js",

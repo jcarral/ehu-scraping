@@ -1,10 +1,9 @@
 language: node_js
 node_js:
   - "stable"
-
 deploy:
-	provider: npm
-	email: "jcarraldc@gmail.com"
-	api_key: $NPMKEY
-	on:
-		branch: master
+  provider: npm
+  email: "jcarraldc@gmail.com"
+  api_key: $NPMKEY
+  on:
+    branch: master

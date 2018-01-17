@@ -1,6 +1,6 @@
 {
   "name": "ehuScrapingLib",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Easy way to get EHU website data",
   "main": "index.js",
   "scripts": {
@@ -12,9 +12,13 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "request": "^2.83.0"
-  },
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jcarral/ehu-scraping"
+	},
   "devDependencies": {
-		"mocha": "^4.1.0",
+    "mocha": "^4.1.0",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1"
   }

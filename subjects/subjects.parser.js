@@ -66,7 +66,7 @@ const _parseSubjectInfo = (data) => new Promise((resolve, reject) => {
 
 	const $ = cheerio.load(data);
 	const container = $('#contenedor');
-	const content = $('#contenido_ h1');
+	const content = $('#contenido h1');
 	const title = $(content).text().split('-');
 	let subject = {};
 
@@ -342,7 +342,7 @@ const getJustText = ($, node) => {
 }
 
 const getTitleAndCode = ($) => {
-	const content = $('#contenido_ h1');
+	const content = $('#contenido h1');
 	const title = $(content).text().split('-');
 	return {
 		name: title[1].substring(1, title[1].length),

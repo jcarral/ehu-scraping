@@ -5,15 +5,21 @@ const {getCampusUrl, getAllGradesUrl, getGradeUrl, getGradeSubjectsUrl} = requir
 const {parseCampusData, parseGradesBySchool, parseGradeSummary, parseGradeSubjects} = require('./grades.parser.js');
 const {getDataFromWeb} = require('../utils/scraping');
 
+/**
+ * Returns the list of grades of a campus
+ * @param {String} campus [BI, GI, AR]
+ */
 const getGradesByCampus = (campus) => {
 	if (!campus || campus.length === 0 || typeof campus === "function") {
 		return Promise.reject("Campus must be an String. Only BI, GI, and AR are avalaible.");
 	} else {
-		return getCampusUrl(campus).then(url => getDataFromWeb(url)).then(data => parseCampusData(data))
+		const url = getAllGradesUrl();
+		return getDataFromWeb(url)
+			.then(data => parseCampusData(data, campus));
 	}
 };
 
-const getGradesBySchool = (school, callback) => {
+const getGradesBySchool = (school) => {
 	if (!school || typeof school !== typeof 0) {
 		return Promise.reject("School must be a valid integer.");
 	} else {

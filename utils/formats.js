@@ -1,16 +1,27 @@
 "use strict";
 
 const _campusValue = (str) => {
-	str = str.toUpperCase();
+	str = str.toUpperCase().trim();
 	switch (str) {
-		case "BI" || "BIZKAIA" || "BIZ" || "VIZCAYA":
+		case 'BI':
+		case 'BIZKAIA':
+		case 'BIZ':
+		case 'VIZCAYA':
 			return 3;
-		case "AR" || "ARABA" || "ARA" || "ALAVA":
+		case 'AR':
+		case 'ARABA':
+		case 'ARA':
+		case 'ALAVA':
+		case 'ÁLAVA':
 			return 1;
-		case "GI" || "GIPUZKOA" || "GIP" || "GUIPÚZCOA" || "GUIPUZCOA":
+		case 'GI':
+		case 'GIPUZKOA':
+		case 'GIP':
+		case 'GUIPÚZCOA':
+		case 'GUIPUZCOA':
 			return 2;
 		default:
-			return Promise.reject("Error: Invalid campus");
+			return Promise.reject(`Error: Invalid campus, ${str}`);
 	}
 };
 

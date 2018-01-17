@@ -25,9 +25,39 @@ describe('getGradesByCampus:', function ()  {
 					expect(school).to.be.an('object');
 					expect(school).to.have.property('name');
 					expect(school).to.have.property('code');
+					expect(school).to.have.property('campus');
 					expect(school).to.have.property('grades');
 					expect(school.grades).to.be.an('array');
 					if(school.grades.length > 0){
+						const grade = school.grades[0];
+						expect(grade).to.be.an('object');
+						expect(grade).to.have.property('name');
+						expect(grade).to.have.property('href');
+						expect(grade).to.have.property('code');
+					}
+				}
+			});
+	});
+});
+
+describe('getGradesBySchool:', function () {
+	it('should return an error, campus code needed', function () {
+		return expect(getGradesBySchool()).to.be.rejected;
+	});
+
+	it('should return an object with all the attributes', () => {
+		return getGradesBySchool(328)
+			.then(res => {
+				expect(res).to.be.an('array');
+				if (res.length > 0) {
+					const school = res[0];
+					expect(school).to.be.an('object');
+					expect(school).to.have.property('name');
+					expect(school).to.have.property('code');
+					expect(school).to.have.property('campus');
+					expect(school).to.have.property('grades');
+					expect(school.grades).to.be.an('array');
+					if (school.grades.length > 0) {
 						const grade = school.grades[0];
 						expect(grade).to.be.an('object');
 						expect(grade).to.have.property('name');

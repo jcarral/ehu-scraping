@@ -8,6 +8,7 @@ const _getCampusUrl = (code) => {
 }
 
 const _getAllGradesUrl = () => 'http://gestion-servicios.ehu.es/pls/entrada/plew0040.htm';
+const _getTeachersUrl = (grade) => `https://www.ehu.eus/es/web/estudiosdegrado-gradukoikasketak/${grade}-profesorado`;
 
 const _getGradeUrl = (grade, school) => {
 	if (!grade || !school)
@@ -49,4 +50,5 @@ module.exports = {
 	getGradeSubjectsUrl: _getGradeSubjectsUrl,
 	getSubjectUrl : _getSubjectUrl,
 	getUrlCode : _getUrlCode,
+	getTeachersUrl: _getTeachersUrl
 }

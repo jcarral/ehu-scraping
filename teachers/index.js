@@ -1,9 +1,9 @@
 "use strict"
 
 const { getDataFromWeb } = require('../utils/scraping');
-const { getTeachersUrl } = require('../utils/urls');
+const { getTeachersUrl, getTeacherProfileUrl } = require('../utils/urls');
 const { grades } = require('../utils/codes');
-const { parseTeacherList } = require('./teachers.parser');
+const { parseTeacherList, parseTeacherSchedule } = require('./teachers.parser');
 
 const _getTeachersFromGrade = (grade) => {
 	if(!grade || typeof grade !== typeof "string") return Promise.reject("Error: Code of the grade is required [getTeachersFromGrade]");
@@ -19,6 +19,11 @@ const _getTeachersFromGrade = (grade) => {
 const _getTeacherSchedule = (grade, id) => {
 	if(!grade || typeof grade !== typeof "string")	 return Promise.reject("Error: Code of the grade is required [getTeacherSummary]");
 	if (!id || typeof id !== typeof "string") return Promise.reject("Error: Id of the required is required [getTeacherSummary]");
+	
+	const gradeName = grades[grade];
+	const url = getTeacherProfileUrl(gradeName, id);
+	return getDataFromWeb(url)
+		.then(data => parseTeacherSchedule(data, grade, id));
 };
 
 module.exports = {

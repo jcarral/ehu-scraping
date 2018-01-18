@@ -9,6 +9,11 @@ const _getCampusUrl = (code) => {
 
 const _getAllGradesUrl = () => 'http://gestion-servicios.ehu.es/pls/entrada/plew0040.htm';
 const _getTeachersUrl = (grade) => `https://www.ehu.eus/es/web/estudiosdegrado-gradukoikasketak/${grade}-profesorado`;
+const _getTeacherProfileUrl = (grade, id) => {
+	const year = (new Date()).getFullYear();
+	const month = (new Date()).getMonth();
+	return `https://www.ehu.eus/es/web/estudiosdegrado-gradukoikasketak/${grade}-profesorado?p_redirect=consultaTutorias&p_anyo_acad=${(month > 6)?year:(year-1)}0&p_idp=${id}`
+};
 
 const _getGradeUrl = (grade, school) => {
 	if (!grade || !school)
@@ -50,5 +55,6 @@ module.exports = {
 	getGradeSubjectsUrl: _getGradeSubjectsUrl,
 	getSubjectUrl : _getSubjectUrl,
 	getUrlCode : _getUrlCode,
-	getTeachersUrl: _getTeachersUrl
-}
+	getTeachersUrl: _getTeachersUrl,
+	getTeacherProfileUrl: _getTeacherProfileUrl
+};

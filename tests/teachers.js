@@ -2,24 +2,23 @@ const chai = require('chai');
 const { expect, assert } = chai;
 const chaiAsPromised = require('chai-as-promised');
 
-const { getTeachersByGrade, getTeacherSchedule } = require('../');
+const { getTeachersFromGrade, getTeacherSchedule } = require('../');
 
 chai.use(chaiAsPromised);
 
 describe('getTeacherByGrade', () => {
 	it('should return an error, grade code is required', () => {
-		return expect(getTeachersByGrade()).to.be.rejected;
+		return expect(getTeachersFromGrade()).to.be.rejected;
 	});
 
-	it('should return an array array with the list of teachers', () => {
-		return getTeachersByGrade('GINFOR20')
+	it('should return an object with the list of teachers', () => {
+		return getTeachersFromGrade('GINFOR20')
 			.then(res => {
 				expect(res).to.be.an('object');
 				expect(res).to.have.property('school');
 				expect(res).to.have.property('grade');
 				expect(res).to.have.property('teachers');
 				expect(res.teachers).to.be.an('array');
-				expect(res.teachers).to.have.members();
 				const teacher = res.teachers[0];
 				expect(teacher).to.be.an('object');
 				expect(teacher).to.have.property('name');

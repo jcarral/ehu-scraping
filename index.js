@@ -14,6 +14,11 @@ const {
 	getSubjectSchedule
 } = require('./subjects');
 
+const {
+	getTeacherSchedule,
+	getTeachersFromGrade
+} = require('./teachers');
+
 module.exports = {
   getGradesByCampus ,
   getGradesBySchool ,
@@ -22,5 +27,7 @@ module.exports = {
   getGradeSubjectsByCourse,
   getSubjectSummary,
   getSubjectInfo,
-	getSubjectSchedule
+	getSubjectSchedule,
+	getTeachersFromGrade,
+	getTeacherSchedule
 }

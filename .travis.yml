@@ -1,9 +1,11 @@
 language: node_js
 node_js:
-  - "stable"
+- stable
 deploy:
   provider: npm
-  email: "jcarraldc@gmail.com"
-  api_key: $NPMKEY
+  email: jcarraldc@gmail.com
+  api_key:
+    secure: nHAIWB3LEcfGe9SjQ7JZ//BMKnhtV0f6C1BZ8Xl/WVV5l1ptVO9zlKjaDsMsEJLQq4onQtO+L1dl9hwjSPDyhx4rJ4BHaD2nZUo4qZCtBNVjeo8gVdNngFEs79tMP1XJszhRu8OlROLpRHF7DIsxDwZDruKtqG+HEgRt7DQbaSw8hOHY59mj3gPdDyq2vA7HV6uX5R2FOGdkeXtVrYqrLxh3Ppn8A71TfUnYdHVtiA7GyhVZixq8O+Sz0rzb2jpZmjY3B5ehSTb9uo5ywFSM46mr46BUlyj/BgKEC2IUxRdALjg1eD7Q4tS04usqoiago8GQRzSZQoDPLRq4LSf8ttHQaojCgpfeJQaSkDymN9SIYi1Tx+fXIrbGQazlk3lsa2eNot34w3KhMjT7t6mCSgikyLBL5/8Q8mf9jFSRd0gMwmo6j+ubh1dYvyvPpi2eMCiotVNV/9YLypOm92Kv/V+cdTHLqOeH9zkV3g0kNAFz31ojPcJS2rrjJFC92UwgfpiPkor4Z52zU8HvAAZ3asAx+1RGeON2THflSb/UNDrQFfP4I6TWwLyrUohlLGOpNGHpBGexqsAvSeC4EDj8j3gM4IXUi6BgWKR0mpTHixPDwjSq+kYRRUpVjxqgqNBQp4dQmUpTGoUqxR+WGSDl8cGWpma5TqY57qrY2pkmD0A=
   on:
-    branch: master
+    branch: releases
+    tags: on

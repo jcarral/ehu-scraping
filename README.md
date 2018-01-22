@@ -38,7 +38,7 @@ Luego, basta con utilizar las funciones de los objetos que se han importado. Par
 const listaDeGrados = University.getDegreesList({campus: 'BI'}); 
 
 //Asignaturas de la carrera de informatica de la FISS
-const gradoInformatica = new Degree('GINFOR20', '226');
+const gradoInformatica = new Degree('GINFOR20');
 const asignaturasInfor = gradoInformatica.getSubjects(); 
 ```
 

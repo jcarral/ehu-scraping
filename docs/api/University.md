@@ -7,9 +7,9 @@ import { University } from 'ehu-scraping'
 ```
 
 - [University](#university)
-	- [static getDegreesList([data])](#static-getdegreeslistdata-promise)
-	- [static getCampus()](#static-getcampus-object)
-	- [static getDegreesUrl()](#static-getdegreesurl-string)
+	- [static getDegreesList([data])](#static-getdegreeslistdata--promise)
+	- [static getCampus()](#static-getcampus--object)
+	- [static getDegreesUrl()](#static-getdegreesurl--string)
 
 ---
 ## Métodos

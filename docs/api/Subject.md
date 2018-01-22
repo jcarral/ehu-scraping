@@ -8,16 +8,16 @@ import { Subject } from 'ehu-scraping';
 const gestion = new Subject('25987', 'GINFOR20', '3');
 ```
 El constructor de la asignatura recibe el código de la asignatura, el código del grado y el curso de la misma.
-El curso puede tomar cualquiera de los siguientes valores: ``['1', '2', '3', '4', '5', 'X' ]`:
+El curso puede tomar cualquiera de los siguientes valores: `['1', '2', '3', '4', '5', 'X' ]`:
 
 - [Subject](#subject)
-	- [getSummary()](#getsummary-promise)
-	- [getDetail()](#getdetail-promise)
-	- [getSchedule()](#getschedule-promise)
-	- [subject](#subject-string)
-	- [school](#school-string)
-	- [degree](#degree-string)
-	- [course](#course-string)
+	- [getSummary()](#getsummary--promise)
+	- [getDetail()](#getdetail--promise)
+	- [getSchedule()](#getschedule--promise)
+	- [subject](#subject--string)
+	- [school](#school--string)
+	- [degree](#degree--string)
+	- [course](#course--string)
 
 ---
 ## Métodos

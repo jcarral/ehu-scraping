@@ -10,9 +10,9 @@ const prof = new Teacher('4150', 'GINFOR20');
 Un profesor esta caracterizado por su id y el grado sobre el que se pretende consultar su información. Dado que un profesor puede impartir clases en diferentes grados se especifica de cual es el que se quiere obtener la información.
 
 - [Teacher](#teacher)
-	- [getTutorships()](#gettutorships-promise)
-	- [id](#id-string)
-	- [degree](#degree-string)
+	- [getTutorships()](#gettutorships--promise)
+	- [id](#id--string)
+	- [degree](#degree--string)
 
 ---
 ## Métodos

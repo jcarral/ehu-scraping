@@ -1,14 +1,14 @@
 # Degree
 
 - [Degree](#degree)
-	- [getSummary()](#getsummary-promise)
-	- [getSubjects([course])](#getsubjectscourse-promise)
-	- [getTeachers()](#getteachers-promise)
-	- [getURL()](#static-geturl-string)
-	- [static getName(code)](#static-getnamecode-string)
-	- [static getCode(codeName)](#static-getcodename-string)
-	- [code](#code-string)
-	- [school](#school-string)
+	- [getSummary()](#getsummary--promise)
+	- [getSubjects([course])](#getsubjectscourse--promise)
+	- [getTeachers()](#getteachers--promise)
+	- [getURL()](#static-geturl--string)
+	- [static getName(code)](#static-getnamecode--string)
+	- [static getCode(codeName)](#static-getcodename--string)
+	- [code](#code--string)
+	- [school](#school--string)
 
 El objeto grado esta compuesto por dos atributos, el código del grado  Se pueden consultar estos datos en la [tabla de equivalencias](./Equivalencias.md).
 
@@ -28,7 +28,7 @@ const informaticaFISS = new Grade('GINFOR20');
  ```
 
 Respuesta: 
-```json
+```javascript
 {
     name: 'Grado en Ingeniería Informática - 2017/18',
     href: 'http://gestion-servicios.ehu.es/pls/entrada/plew0040.htm_siguiente?p_sesion=&p_cod_idioma=CAS&p_en_portal=N&p_anyoAcad=act&p_cod_centro=226&p_cod_plan=GINFOR20&p_menu=intro',

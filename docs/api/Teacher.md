@@ -35,18 +35,18 @@ Respuesta:
     },
     "category": "Profesorado Titular De Universidad (Doctor)",
     "departament": "Lenguajes y Sistemas InformÃ¡ticos",
-    "email": "josemiguel.blanco@ehu.eus",
+    "email": "jmb@ehu.eus",
     "area": "Lenguajes y Sistemas InformÃ¡ticos",
     "id": "4150",
-    "name": "BLANCO ARBE, JOSE MIGUEL",
+    "name": "BANCO ARBE, JOSE MANUEL",
     "href": "https://www.ehu.eus/es/web/estudiosdegrado-gradukoikasketak/grado-ingenieria-informatica-profesorado?p_redirect=consultaTutorias&p_anyo_acad=20170&p_idp=4150",
     "schedule": [
         {
-            "place": "Facultad De InformÃ¡tica Despacho Del Profesor O Profesora - 234",
+            "place": "Facultad De InformÃ¡tica Despacho Del Profesor O Profesora - 123",
             "date-start": "2017-09-11T17:15",
             "date-end": "2017-09-11T19:15"
         },{..},{
-            "place": "Facultad De InformÃ¡tica Despacho Del Profesor O Profesora - 234",
+            "place": "Facultad De InformÃ¡tica Despacho Del Profesor O Profesora - 123",
             "date-start": "2018-07-26T15:30",
             "date-end": "2018-07-26T18:30"
         }

@@ -37,10 +37,10 @@ Respuesta:
     school: { name: 'Facultad de Informática', code: '226' },
     contact:
         {
-            name: ' NEREA EZEIZA',
-            email: ' nerea.ezeiza@ehu.eus',
+            name: ' NEREA PEREZ',
+            email: ' nerea@ehu.eus',
             address: '',
-            phone: ' 943018029'
+            phone: ' 943018123'
         }
 };
 ```
@@ -102,15 +102,15 @@ Respuesta:
     "degree": "GINFOR20",
     "teachers": [
         {
-            "name": "ABASCAL GONZALEZ, JULIO",
+            "name": "SALINAS GONZALEZ, JULIO",
             "href": "https://www.ehu.eus/es/web/estudiosdegrado-gradukoikasketak/GINFOR20-profesorado?p_redirect=consultaTutorias&p_anyo_acad=20170&p_idp=1879",
             "id": "1879",
-            "email": " julio.abascal@ehu.eus"
+            "email": " julio.salinas@ehu.eus"
         },{...},{
-            "name": "ZUBIZARRETA AIZPURU, JOSE RAMON",
+            "name": "ZUBIZARRETA DIEZ, RAMON",
             "href": "https://www.ehu.eus/es/web/estudiosdegrado-gradukoikasketak/GINFOR20-profesorado?p_redirect=consultaTutorias&p_anyo_acad=20170&p_idp=5341",
             "id": "5341",
-            "email": " joseramon.zubizarreta@ehu.eus"
+            "email": " ramon.zubizarreta@ehu.eus"
         }
     ]
 }

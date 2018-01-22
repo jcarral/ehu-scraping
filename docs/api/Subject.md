@@ -44,7 +44,7 @@ Respuesta:
     },
     "teachers": [
         {
-            "name": "BLANCO ARBE, JOSE MIGUEL",
+            "name": "BANCO ARBE, JOSE MANUEL",
             "code_school": "226",
             "code_degree": "GINFOR20",
             "id_teacher": "4150",
@@ -143,7 +143,7 @@ Respuesta:
             ],
             "teachers": [
                 {
-                    "name": "BLANCO ARBE, JOSE MIGUEL",
+                    "name": "BANCO ARBE, JOSE MANUEL",
                     "code_school": "226",
                     "code_degree": "GINFOR20",
                     "id_teacher": "4150",
@@ -152,7 +152,7 @@ Respuesta:
                     "languages": []
                 },
                 {
-                    "name": "TORRE HERNANDEZ, GORGONIO JOSE LUIS",
+                    "name": "PEREZ FERNANDEZ, LUIS",
                     "code_school": "226",
                     "code_degree": "GINFOR20",
                     "id_teacher": "3397",

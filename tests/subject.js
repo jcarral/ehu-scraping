@@ -12,14 +12,14 @@ describe('getSummary', () => {
 	it('should return an error, parameters are required', () => expect(new Subject().getSummary()).to.be.rejected);
 
 	it('should return an object with the subject info summary attributes from complete subject', () => {
-		return new Subject('26224', '226', 'GINFOR20', '4').getSummary()
+		return new Subject('26224', 'GINFOR20', '4').getSummary()
 			.then(res => {
 				completeSubjectSummary(res);
 			});
 	});
 
 	it('should return an object with the subject info summary attributes from partial subject', () => {
-		return new Subject('25016', '323', 'GSOCIO30', '4').getSummary()
+		return new Subject('25016', 'GSOCIO30', '4').getSummary()
 			.then(res => {
 				completeSubjectSummary(res);
 			});
@@ -33,14 +33,14 @@ describe('getDetail', () => {
 	it('should return an error, parameters are required', () => expect(new Subject().getDetail()).to.be.rejected);
 
 	it('should return an object with the subject info attributes from complete subject', () => {
-		return new Subject('26224', '226', 'GINFOR20', '4').getDetail()
+		return new Subject('26224', 'GINFOR20', '4').getDetail()
 			.then(res => {
 				completeSubjectInfo(res);
 			});
 	});
 
 	it('should return an object with the subject info attributes from partial subject', () => {
-		return new Subject('25016', '323', 'GSOCIO30', '4').getDetail()
+		return new Subject('25016', 'GSOCIO30', '4').getDetail()
 			.then(res => {
 				completeSubjectInfo(res);
 			});
@@ -51,14 +51,14 @@ describe('getSchedule', () => {
 	it('should return an error, parameters are required', () => expect(new Subject().getSchedule()).to.be.rejected);
 
 	it('should return an object with the subject schedule attributes from complete subject', () => {
-		return new Subject('26224', '226', 'GINFOR20', '4').getSchedule()
+		return new Subject('26224', 'GINFOR20', '4').getSchedule()
 			.then(res => {
 				completeSubjectSchedule(res);
 			});
 	});
 
 	it('should return an object with the subject schedule attributes from partial subject', () => {
-		return new Subject('25016', '323', 'GSOCIO30', '4').getSchedule()
+		return new Subject('25016', 'GSOCIO30', '4').getSchedule()
 			.then(res => {
 				completeSubjectSchedule(res);
 			});

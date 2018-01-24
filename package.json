@@ -1,6 +1,6 @@
 {
   "name": "ehu-scraping",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Easy way to get EHU website data",
   "main": "index.js",
   "scripts": {
@@ -18,8 +18,8 @@
     "url": "https://github.com/jcarral/ehu-scraping"
   },
   "devDependencies": {
-    "mocha": "^4.1.0",
     "chai": "^4.1.2",
-    "chai-as-promised": "^7.1.1"
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^4.1.0"
   }
 }

@@ -4,7 +4,8 @@
   "description": "Easy way to get EHU website data",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests"
+		"test": "mocha ./tests",
+		"lint": "./node_modules/.bin/eslint ./lib/"				
   },
   "keywords": [],
   "author": "Joseba Carral <jcarraldc@gmail.com>",
@@ -18,8 +19,9 @@
     "url": "https://github.com/jcarral/ehu-scraping"
   },
   "devDependencies": {
-    "mocha": "^4.1.0",
     "chai": "^4.1.2",
-    "chai-as-promised": "^7.1.1"
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^4.16.0",
+    "mocha": "^4.1.0"
   }
 }

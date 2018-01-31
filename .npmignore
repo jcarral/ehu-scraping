@@ -5,4 +5,4 @@ test_json
 yarn.lock
 yarn-error.log
 .vscode
-documentation
+docs

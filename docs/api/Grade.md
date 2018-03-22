@@ -1,6 +1,6 @@
-# Degree
+# Grade
 
-- [Degree](#degree)
+- [Grade](#grade)
 	- [getSummary()](#getsummary--promise)
 	- [getSubjects([course])](#getsubjectscourse--promise)
 	- [getTeachers()](#getteachers--promise)
@@ -33,7 +33,7 @@ Respuesta:
     name: 'Grado en Ingeniería Informática - 2017/18',
     href: 'http://gestion-servicios.ehu.es/pls/entrada/plew0040.htm_siguiente?p_sesion=&p_cod_idioma=CAS&p_en_portal=N&p_anyoAcad=act&p_cod_centro=226&p_cod_plan=GINFOR20&p_menu=intro',
     summary: 'El Grado en Ingeniería Informática te ofrece un inmenso campo para el estudio, la investigación y la innovación. Las Nuevas Tecnologías de la Información y la Comunicación están hoy en día presentes en todos los ámbitos de nuestra vida cotidiana. En este grado podrás profundizar en áreas tan apasionantes como la inteligencia artificial, la robótica, el procesamiento del lenguaje natural, el procesamiento digital de imagen y sonido, las comunicaciones multimedia, etc. Todo esto lo podrás averiguar en el Grado de Ingeniería Informática. Y además podrás especializarte en Computación, Ingeniería de Computadores o Ingeniería del Software. También, te  formarás para trabajar de manera autónoma o integrada en equipos multidisciplinares.',
-    'minimum-degree': '9,83',
+    'minimum-grade': '9,83',
     school: { name: 'Facultad de Informática', code: '226' },
     contact:
         {
@@ -99,7 +99,7 @@ Respuesta:
 
 ```json
 {
-    "degree": "GINFOR20",
+    "grade": "GINFOR20",
     "teachers": [
         {
             "name": "SALINAS GONZALEZ, JULIO",
@@ -126,7 +126,7 @@ Devuelve el nombre el nombre del grado asociado a un grado.
 Se puede consultar todos los nombres en la [tabla de equivalencias.](./Equivalencias.md)
 
 ```javascript
-Degree.getName('GINFOR20');
+Grade.getName('GINFOR20');
 // Respuesta: grado-ingenieria-informatica
 ```
 
@@ -134,7 +134,7 @@ Degree.getName('GINFOR20');
 Dado un grado devuelve el codigo del mismo.
 
 ```javascript
-Degree.getCode('grado-ingenieria-informatica');
+Grade.getCode('grado-ingenieria-informatica');
 // Respuesta: GINFOR20
 ```
 

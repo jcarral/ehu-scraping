@@ -7,14 +7,14 @@ import { University } from 'ehu-scraping'
 ```
 
 - [University](#university)
-	- [static getDegreesList([data])](#static-getdegreeslistdata--promise)
+	- [static getGradesList([data])](#static-getgradeslistdata--promise)
 	- [static getCampus()](#static-getcampus--object)
-	- [static getDegreesUrl()](#static-getdegreesurl--string)
+	- [static getGradesUrl()](#static-getgradesurl--string)
 
 ---
 ## Métodos
 
-### static getDegreesList([data])() : Promise
+### static getGradesList([data])() : Promise
 Función estática para obtener la lista de grados de la UPV-EHU. El parámetro `data` es opcional, es un objeto que puede tener cualquiera de los siguientes atributos para filtrar la lista.
 ```javascript
 {
@@ -34,7 +34,7 @@ Función estática para obtener la lista de grados de la UPV-EHU. El parámetro 
  ```
  Uso:
  ```javascript
- University.getDegreesList({campus: 'GI'});
+ University.getGradesList({campus: 'GI'});
  ```
  Respuesta:
  ```javascript
@@ -43,7 +43,7 @@ Función estática para obtener la lista de grados de la UPV-EHU. El parámetro 
         "code": "263",
         "name": "Escuela de Ingeniería de Gipuzkoa",
         "campus": 2,
-        "degrees": [
+        "grades": [
             {
                 "href": "http://gestion-servicios.ehu.es/pls/entrada/plew0040.htm/pls/entrada/plew0040.htm_siguiente?p_sesion=&p_cod_idioma=CAS&p_en_portal=N&p_anyoAcad=act&p_cod_centro=263&p_cod_plan=GDIMEL20&p_menu=intro",
                 "name": "Doble Grado en Ingeniería Mecánica e Ingeniería Electrónica Industrial y Automática ",
@@ -53,7 +53,7 @@ Función estática para obtener la lista de grados de la UPV-EHU. El parámetro 
         "code": "215",
         "name": "Facultad de Ciencias Químicas",
         "campus": 2,
-        "degrees": [
+        "grades": [
             {
                 "href": "http://gestion-servicios.ehu.es/pls/entrada/plew0040.htm/pls/entrada/plew0040.htm_siguiente?p_sesion=&p_cod_idioma=CAS&p_en_portal=N&p_anyoAcad=act&p_cod_centro=215&p_cod_plan=GQUIMI20&p_menu=intro",
                 "name": "Grado en Química ",
@@ -85,10 +85,10 @@ Respuesta: [
 */
 ```
 
-### static getDegreesUrl() : String
+### static getGradesUrl() : String
 Devuelve la url de la página con todos los grados.
 
 ```javascript
-University.getDegreesUrl();
+University.getGradesUrl();
 //Res: 'http://gestion-servicios.ehu.es/pls/entrada/plew0040.htm'
 ```

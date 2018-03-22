@@ -12,7 +12,7 @@ describe('getTutorships', () => {
 		return expect(new Teacher(null, 'GINFOR20').getTutorships()).to.be.rejected;
 	});
 
-	it('should return an error, degree is required', () => {
+	it('should return an error, grade is required', () => {
 		return expect(new Teacher('4150').getTutorships()).to.be.rejected;
 	});
 
@@ -25,10 +25,10 @@ describe('getTutorships', () => {
 			expect(res).to.be.an('object');
 			expect(res).to.have.property('name');
 			expect(res).to.have.property('category');
-			expect(res).to.have.property('degree');
-			expect(res.degree).to.be.an('object');
-			expect(res.degree).to.have.property('name');
-			expect(res.degree).to.have.property('code');
+			expect(res).to.have.property('grade');
+			expect(res.grade).to.be.an('object');
+			expect(res.grade).to.have.property('name');
+			expect(res.grade).to.have.property('code');
 			expect(res).to.have.property('departament');
 			expect(res).to.have.property('area');
 			expect(res).to.have.property('id');

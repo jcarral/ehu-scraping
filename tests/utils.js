@@ -5,7 +5,7 @@ const chaiAsPromised = require('chai-as-promised');
 const { groupBy } = require('../lib/utils/util');
 
 describe('GroupBy:', () => {
-	it('should return an grouped by the name of degree', () => {
+	it('should return an grouped by the name of grade', () => {
 		const groupedData = groupBy('school', fakeData);
 		expect(groupedData).to.deep.have.same.members(fakeDataGrouped);
 		});
@@ -56,7 +56,7 @@ const fakeData = [
 const fakeDataGrouped = [
 	{
 		"name": "aute exercitation",
-		"degrees": [
+		"grades": [
 			{
 				"name": "dolor ea quis adipisicing eu"
 			},
@@ -67,7 +67,7 @@ const fakeDataGrouped = [
 	},
 	{
 		"name": "cillum dolor nulla labore",
-		"degrees": [
+		"grades": [
 			{
 				"name": "non in"
 			},
@@ -78,7 +78,7 @@ const fakeDataGrouped = [
 	},
 	{
 		"name": "officia et nostrud nulla",
-		"degrees": [
+		"grades": [
 			{
 				"name": "elit"
 			},

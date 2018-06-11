@@ -72,7 +72,7 @@ const completeSubjectInfo = (res) => {
 	expect(res).to.be.an('object');
 	expect(res).to.have.property('name');
 	expect(res).to.have.property('school');
-	expect(res).to.have.property('grade');
+	expect(res).to.have.property('degree');
 	expect(res).to.have.property('year');
 	expect(res).to.have.property('course');
 	expect(res).to.have.property('description');
@@ -99,10 +99,10 @@ const completeSubjectSummary = (res) => {
 	expect(res.school).to.be.an('object');
 	expect(res.school).to.have.property('name');
 	expect(res.school).to.have.property('code');
-	expect(res).to.have.property('grade');
-	expect(res.grade).to.be.an('object')
-	expect(res.grade).to.have.property('name');
-	expect(res.grade).to.have.property('code');
+	expect(res).to.have.property('degree');
+	expect(res.degree).to.be.an('object')
+	expect(res.degree).to.have.property('name');
+	expect(res.degree).to.have.property('code');
 	expect(res).to.have.property('languages');
 	expect(res.languages).to.be.an('array');
 	expect(res).to.have.property('teachers');
@@ -112,7 +112,7 @@ const completeSubjectSummary = (res) => {
 		expect(teacher).to.be.an('object');
 		expect(teacher).to.have.property('name');
 		expect(teacher).to.have.property('code_school');
-		expect(teacher).to.have.property('code_grade');
+		expect(teacher).to.have.property('code_degree');
 		expect(teacher).to.have.property('id_teacher');
 		expect(teacher).to.have.property('dep_teacher');
 		expect(teacher).to.have.property('code_area');
@@ -136,7 +136,7 @@ const completeSubjectSchedule = (res) => {
 			expect(teacher).to.be.an('object');
 			expect(teacher).to.have.property('name');
 			expect(teacher).to.have.property('code_school');
-			expect(teacher).to.have.property('code_grade');
+			expect(teacher).to.have.property('code_degree');
 			expect(teacher).to.have.property('id_teacher');
 			expect(teacher).to.have.property('dep_teacher');
 			expect(teacher).to.have.property('code_area');

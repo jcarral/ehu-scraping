@@ -27,7 +27,7 @@ yarn add ehu-scraping
 
 Una vez instalada la librería hay que importarla en el proyecto.
 ```javascript
-import {University, Grade } from 'ehu-scraping';
+import {University, Degree } from 'ehu-scraping';
 const { University } = require('ehu-scraping');
 ```
 
@@ -35,10 +35,10 @@ Luego, basta con utilizar las funciones de los objetos que se han importado. Par
 
 ```javascript
 // Lista de grados del campus de Bizkaia
-const listaDeGrados = University.getGradesList({campus: 'BI'}); 
+const listaDeGrados = University.getDegreesList({campus: 'BI'}); 
 
 //Asignaturas de la carrera de informatica de la FISS
-const gradoInformatica = new Grade('GINFOR20');
+const gradoInformatica = new Degree('GINFOR20');
 const asignaturasInfor = gradoInformatica.getSubjects(); 
 ```
 
@@ -47,30 +47,30 @@ const asignaturasInfor = gradoInformatica.getSubjects();
 La lista de funciones disponibles es la siguiente, para más información acceder a la información detallada.
 
 - [University](./docs/api/University.md#university)
-	- [static getGradesList([data])](./docs/api/University.md#static-getgradeslistdata--promise)
+	- [static getDegreesList([data])](./docs/api/University.md#static-getdegreeslistdata--promise)
 	- [static getCampus()](./docs/api/University.md#static-getcampus--object)
-	- [static getGradesUrl()](./docs/api/University.md#static-getgradesurl--string)
-- [Grade](./docs/api/Grade.md#grade)
-	- [getSummary()](./docs/api/Grade.md#getsummary--promise)
-	- [getSubjects([course])](./docs/api/Grade.md#getsubjectscourse--promise)
-	- [getTeachers()](./docs/api/Grade.md#getteachers--promise)
-	- [getURL()](./docs/api/Grade.md#static-geturl--string)
-	- [static getName(code)](./docs/api/Grade.md#static-getnamecode--string)
-	- [static getCode(codeName)](./docs/api/Grade.md#static-getcodename--string)
-	- [code](./docs/api/Grade.md#code--string)
-	- [school](./docs/api/Grade.md#school--string)
+	- [static getDegreesUrl()](./docs/api/University.md#static-getdegreesurl--string)
+- [Degree](./docs/api/Degree.md#degree)
+	- [getSummary()](./docs/api/Degree.md#getsummary--promise)
+	- [getSubjects([course])](./docs/api/Degree.md#getsubjectscourse--promise)
+	- [getTeachers()](./docs/api/Degree.md#getteachers--promise)
+	- [getURL()](./docs/api/Degree.md#static-geturl--string)
+	- [static getName(code)](./docs/api/Degree.md#static-getnamecode--string)
+	- [static getCode(codeName)](./docs/api/Degree.md#static-getcodename--string)
+	- [code](./docs/api/Degree.md#code--string)
+	- [school](./docs/api/Degree.md#school--string)
 - [Subject](./docs/api/Subject.md#subject)
 	- [getSummary()](./docs/api/Subject.md#getsummary--promise)
 	- [getDetail()](./docs/api/Subject.md#getdetail--promise)
 	- [getSchedule()](./docs/api/Subject.md#getschedule--promise)
 	- [subject](./docs/api/Subject.md#subject--string)
 	- [school](./docs/api/Subject.md#school--string)
-	- [grade](./docs/api/Subject.md#grade--string)
+	- [degree](./docs/api/Subject.md#degree--string)
 	- [course](./docs/api/Subject.md#course--string)
 - [Teacher](./docs/api/Teacher.md#teacher)
 	- [getTutorships()](./docs/api/Teacher.md#gettutorships--promise)
 	- [id](./docs/api/Teacher.md#id--string)
-	- [grade](./docs/api/Teacher.md#grade--string)
+	- [degree](./docs/api/Teacher.md#degree--string)
 
 
 ## Tests

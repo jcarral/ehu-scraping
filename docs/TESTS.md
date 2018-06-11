@@ -9,22 +9,22 @@ Todos los tests se realizan en el directorio `/tests/`. Cada clase de la librerÃ
 ```javascript
 describe('getSummary: ', () => {
 	it('should return an error, parameters required', () => {
-		return expect(new Grade().getSummary()).to.be.rejected;
+		return expect(new Degree().getSummary()).to.be.rejected;
 	});
 
 	it('should return an error, school code required', function() {
-		return expect(new Grade('GINFOR30').getSummary()).to.be.rejected;
+		return expect(new Degree('GINFOR30').getSummary()).to.be.rejected;
 	});
 
 	it('should return an object with all the attributes', () => {
-		const sociologia = new Grade('GESOCI30', '354');
+		const sociologia = new Degree('GESOCI30', '354');
 		return sociologia.getSummary()
 			.then(res => {
 				expect(res).to.be.an('object');
 				expect(res).to.have.property('name');
 				expect(res).to.have.property('href');
 				expect(res).to.have.property('summary');
-				expect(res).to.have.property('minimum-grade');
+				expect(res).to.have.property('minimum-degree');
 				expect(res).to.have.property('contact');
 				expect(res.contact).to.be.an('object');
 				expect(res.contact).to.have.property('address');

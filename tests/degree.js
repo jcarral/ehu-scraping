@@ -3,29 +3,29 @@ const  { expect, assert } = chai;
 const chaiAsPromised = require('chai-as-promised');
 
 const {
-	Grade
+	Degree
 } = require('../');
 
 chai.use(chaiAsPromised);
 
 describe('getSummary: ', () => {
 	it('should return an error, parameters required', () => {
-		return expect(new Grade().getSummary()).to.be.rejected;
+		return expect(new Degree().getSummary()).to.be.rejected;
 	});
 
 	it('should return an error, school code required', function() {
-		return expect(new Grade('GINFOR30').getSummary()).to.be.rejected;
+		return expect(new Degree('GINFOR30').getSummary()).to.be.rejected;
 	});
 
 	it('should return an object with all the attributes', () => {
-		const sociologia = new Grade('GESOCI30', '354');
+		const sociologia = new Degree('GESOCI30', '354');
 		return sociologia.getSummary()
 			.then(res => {
 				expect(res).to.be.an('object');
 				expect(res).to.have.property('name');
 				expect(res).to.have.property('href');
 				expect(res).to.have.property('summary');
-				expect(res).to.have.property('minimum-grade');
+				expect(res).to.have.property('minimum-degree');
 				expect(res).to.have.property('contact');
 				expect(res.contact).to.be.an('object');
 				expect(res.contact).to.have.property('address');
@@ -42,15 +42,15 @@ describe('getSummary: ', () => {
 
 describe('getSubjects: ', () => {
 	it('should return an error, parameters required', () => {
-		return expect(new Grade().getSubjects()).to.be.rejected;
+		return expect(new Degree().getSubjects()).to.be.rejected;
 	});
 
 	it('should return an error, school code required', function() {
-		return expect(new Grade('GINFOR30').getSubjects()).to.be.rejected;
+		return expect(new Degree('GINFOR30').getSubjects()).to.be.rejected;
 	});
 
 	it('should return an object with all the attributes', function() {
-		const sociologia = new Grade('GESOCI30', "354");
+		const sociologia = new Degree('GESOCI30', "354");
 		return sociologia.getSubjects()
 			.then(res => {
 				expect(res).to.be.an('array');
@@ -72,7 +72,7 @@ describe('getSubjects: ', () => {
 	});
 
 	it('should return an object with all the attributes', function () {
-		const sociologia = new Grade('GESOCI30', "354");
+		const sociologia = new Degree('GESOCI30', "354");
 		return sociologia.getSubjects('1')
 			.then(res => {
 				expect(res).to.be.an('array');
@@ -95,15 +95,15 @@ describe('getSubjects: ', () => {
 });
 
 describe('getTeachers', () => {
-	it('should return an error, grade code is required', () => {
-		return expect(new Grade().getTeachers()).to.be.rejected;
+	it('should return an error, degree code is required', () => {
+		return expect(new Degree().getTeachers()).to.be.rejected;
 	});
 
 	it('should return an object with the list of teachers', () => {
-		return new Grade('GINFOR20').getTeachers()
+		return new Degree('GINFOR20').getTeachers()
 			.then(res => {
 				expect(res).to.be.an('object');
-				expect(res).to.have.property('grade');
+				expect(res).to.have.property('degree');
 				expect(res).to.have.property('teachers');
 				expect(res.teachers).to.be.an('array');
 				const teacher = res.teachers[0];

@@ -16,7 +16,7 @@ El curso puede tomar cualquiera de los siguientes valores: `['1', '2', '3', '4',
 	- [getSchedule()](#getschedule--promise)
 	- [subject](#subject--string)
 	- [school](#school--string)
-	- [grade](#grade--string)
+	- [degree](#degree--string)
 	- [course](#course--string)
 
 ---
@@ -38,7 +38,7 @@ Respuesta:
         "code": "226",
         "name": "Facultad de Informática"
     },
-    "grade": {
+    "degree": {
         "code": "GINFOR20",
         "name": "Grado en Ingeniería Informática"
     },
@@ -46,7 +46,7 @@ Respuesta:
         {
             "name": "BANCO ARBE, JOSE MANUEL",
             "code_school": "226",
-            "code_grade": "GINFOR20",
+            "code_degree": "GINFOR20",
             "id_teacher": "4150",
             "dep_teacher": "141",
             "code_area": "0570",
@@ -79,7 +79,7 @@ Respuesta:
         ...
     ],
     "school": "Facultad de Informática",
-    "grade": "Grado en Ingeniería Informática",
+    "degree": "Grado en Ingeniería Informática",
     "course": "2017/18",
     "year": "3",
     "description": "La asignatura corresponde al ámbito de la Gestión de Proyectos Informáticos, tiene asignada seis créditos y se imparte en el tercer curso del Grado en Ingeniería Informática.La formación específica en Gestión de Proyectos en las titulaciones universitarias en informática aparece, con carácter general, a mediados de la década de los noventa, con motivo de la transformación de los planes estudio de Licenciatura en Informática a las ingenierías. ...",
@@ -145,7 +145,7 @@ Respuesta:
                 {
                     "name": "BANCO ARBE, JOSE MANUEL",
                     "code_school": "226",
-                    "code_grade": "GINFOR20",
+                    "code_degree": "GINFOR20",
                     "id_teacher": "4150",
                     "dep_teacher": "141",
                     "code_area": "0570",
@@ -154,7 +154,7 @@ Respuesta:
                 {
                     "name": "PEREZ FERNANDEZ, LUIS",
                     "code_school": "226",
-                    "code_grade": "GINFOR20",
+                    "code_degree": "GINFOR20",
                     "id_teacher": "3397",
                     "dep_teacher": "141",
                     "code_area": "0570",
@@ -174,12 +174,12 @@ const asig = gestion.subject; //25987
 asig.subject = '12345';
 ```
 
-### grade : String
+### degree : String
 Atributo del objeto que permite ver y modificar el codigo del grado.
 
 ```javascript
-const deg = gestion.grade; //'GINFOR20
-deg.grade = 'GINFAN10';
+const deg = gestion.degree; //'GINFOR20
+deg.degree = 'GINFAN10';
 ```
 ### course : String
 Atributo del objeto que permite ver y modificar el curso de la asignatura.

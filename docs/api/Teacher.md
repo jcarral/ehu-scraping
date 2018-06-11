@@ -12,7 +12,7 @@ Un profesor esta caracterizado por su id y el grado sobre el que se pretende con
 - [Teacher](#teacher)
 	- [getTutorships()](#gettutorships--promise)
 	- [id](#id--string)
-	- [grade](#grade--string)
+	- [degree](#degree--string)
 
 ---
 ## Métodos
@@ -29,7 +29,7 @@ prof.getTutorships().then(res => ...).catch(err => ...);
 Respuesta:
 ```javascript
 {
-    "grade": {
+    "degree": {
         "name": "grado-ingenieria-informatica",
         "code": "GINFOR20"
     },
@@ -61,10 +61,10 @@ Atributo del objeto que permite ver y modificar el codigo del profesor.
 const idProf = prof.id; //'4150'
 idProf.id = '1234';
 ```
-### grade : String
+### degree : String
 Atributo del objeto que permite ver y modificar el codigo del grado.
 
 ```javascript
-const deg = prof.grade; //'GINFOR20
-deg.grade = 'GINFAN10';
+const deg = prof.degree; //'GINFOR20
+deg.degree = 'GINFAN10';
 ```

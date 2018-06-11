@@ -13,7 +13,7 @@
 El objeto grado esta compuesto por dos atributos, el código del grado  Se pueden consultar estos datos en la [tabla de equivalencias](./Equivalencias.md).
 
 ```javascript
-const informaticaFISS = new Grade('GINFOR20');
+const informaticaFISS = new Degree('GINFOR20');
 ```
 
 ---

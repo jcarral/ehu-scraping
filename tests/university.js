@@ -28,11 +28,11 @@ describe('getDegreesList:', function () {
 					expect(school).to.have.property('degrees');
 					expect(school.degrees).to.be.an('array');
 					if (school.degrees.length > 0) {
-						const grade = school.degrees[0];
-						expect(grade).to.be.an('object');
-						expect(grade).to.have.property('name');
-						expect(grade).to.have.property('href');
-						expect(grade).to.have.property('code');
+						const degree = school.degrees[0];
+						expect(degree).to.be.an('object');
+						expect(degree).to.have.property('name');
+						expect(degree).to.have.property('href');
+						expect(degree).to.have.property('code');
 					}
 				}
 			});
@@ -52,11 +52,11 @@ describe('getDegreesList:', function () {
 					expect(school).to.have.property('degrees');
 					expect(school.degrees).to.be.an('array');
 					if (school.degrees.length > 0) {
-						const grade = school.degrees[0];
-						expect(grade).to.be.an('object');
-						expect(grade).to.have.property('name');
-						expect(grade).to.have.property('href');
-						expect(grade).to.have.property('code');
+						const degree = school.degrees[0];
+						expect(degree).to.be.an('object');
+						expect(degree).to.have.property('name');
+						expect(degree).to.have.property('href');
+						expect(degree).to.have.property('code');
 					}
 				}
 			});
@@ -76,11 +76,11 @@ describe('getDegreesList:', function () {
 					expect(school).to.have.property('degrees');
 					expect(school.degrees).to.be.an('array');
 					if (school.degrees.length > 0) {
-						const grade = school.degrees[0];
-						expect(grade).to.be.an('object');
-						expect(grade).to.have.property('name');
-						expect(grade).to.have.property('href');
-						expect(grade).to.have.property('code');
+						const degree = school.degrees[0];
+						expect(degree).to.be.an('object');
+						expect(degree).to.have.property('name');
+						expect(degree).to.have.property('href');
+						expect(degree).to.have.property('code');
 					}
 				}
 			});

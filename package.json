@@ -1,6 +1,6 @@
 {
   "name": "ehu-scraping",
-  "version": "1.1.4",
+  "version": "2.0.0",
   "description": "Easy way to get EHU website data",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "Joseba Carral <jcarraldc@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "request": "^2.83.0"

@@ -1,18 +1,28 @@
 # EHU-UPV Scraping 
 [![Build Status](https://travis-ci.org/jcarral/ehu-scraping.svg?branch=master)](https://travis-ci.org/jcarral/ehu-scraping) [![npm version](https://badge.fury.io/js/ehu-scraping.svg)](https://badge.fury.io/js/ehu-scraping)
+![Code style](https://camo.githubusercontent.com/1c5c800fbdabc79cfaca8c90dd47022a5b5c7486/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64652532307374796c652d616972626e622d627269676874677265656e2e7376673f7374796c653d666c61742d737175617265)
 
 Libreria para obtener los datos de la web de la universidad EHU-UPV en formato JSON.
 
 ### Tabla de contenidos
-- [Instalación](#instalacion)
-- [Utilización](#utilizacion)
-- [Documentacion](#documentacion)
-- [Tests](#tests)
-- [Licencia](#licencia)
+1. [Primeros pasos](#primeros-pasos)
+    1. [Prerequisitos](#prerequisitos)
+    2. [Instalación](#instalación)
+    3. [Uso](#uso)
+2. [API](#api)
+3. [Tests](#tests)
+4. [Contribución](#contribución)
+5. [Autors](#autores)
+6. [Licencia](#licencia)
 
----
+## Primeros pasos
+### Prerequisitos
 
-## Instalación
+Para poder hacer uso de esta herramienta se necesitan, al menos, los siguientes herramientas:
+* [NodeJS > 8.9.4](https://nodejs.org/es/)
+* [NPM](http://npmjs.com/) o [Yarn](https://yarnpkg.com/lang/en/)
+
+### Instalación
 
 Se puede utilizar un gestor de paquetes como [npm](https://www.npmjs.com/) o [yarn](https://yarnpkg.com/en/), la versión zip también está disponible.
 
@@ -23,7 +33,7 @@ npm i --save ehu-scraping
 yarn add ehu-scraping
 ```
 
-## Utilización
+### Uso
 
 Una vez instalada la librería hay que importarla en el proyecto.
 ```javascript
@@ -42,7 +52,7 @@ const gradoInformatica = new Degree('GINFOR20');
 const asignaturasInfor = gradoInformatica.getSubjects(); 
 ```
 
-## Documentación
+## API
 
 La lista de funciones disponibles es la siguiente, para más información acceder a la información detallada.
 
@@ -80,5 +90,14 @@ Para ejecutar las pruebas hay que utilizar el siguiente comando:
 npm run test
 ```
 
+## Contribución
+
+Por favor, ve al fichero [CONTRIBUTING.md](CONTRIBUTING.md) para leer con detalle como contribuir al proyecto.
+
+## Autores
+
+* **Joseba Carral** - *Autor* - [jcarral](https://github.com/jcarral)
+
+
 ## Licencia
-Esta librería está bajo la licencia [ISC](./LICENSE.md)
+Esta librería está bajo la licencia [MIT](./LICENSE.md)

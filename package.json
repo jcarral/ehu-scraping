@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "Joseba Carral <jcarraldc@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "request": "^2.83.0"
